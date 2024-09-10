@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+        <title>Задание 1</title>
+    </head>
+
+    <body>
+
+        <h1>Ссылки</h1>
+
+        <ul>
+            <li><a href="http://kubsu.ru/">КубГУ</a></li>
+            <li><a href="https://kubsu.ru/">КубГУ https</a></li>
+            <li>Ссылка-изображение<br/>
+                <a href="https://kubsu.ru/ru/bio/uchebnyy-botanicheskiy-sad-kubgu">
+                <img src="image.jpg" alt="Цветок" 
+            style="width: 300px";/></a></li>
+            <li><a href="/about"></a>Сокращенная ссылка
+            на внутреннюю страницу</li>
+            <li><a href="#formular">Ссылка на анкету</a></li>
+            <li><a href="https://kubsu.ru/?first=1&second=2&third=3">
+                Ссылка с 3-мя параметрами в URL</a></li>
+            <li><a href="https://kubsu.ru/index.php?ID=1"></a>
+            Ссылка с параметром id в URL</li>
+            <li><a href="index.html"></a>Страница в текущем каталоге</li>
+            <li><a href="about/index.html"></a>Страница в каталоге about</li>
+            <li><a href="../index.html">Страница в каталоге 
+                уровнем выше текущего</a></li>
+            <li><a href="../../index.html">Страница в каталоге
+                двумя уровнями выше текущего</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/#about_something">
+                Ссылка на фрагмент страницы стороннего сайта
+            </a></li>
+            <li>Ссылки из областей картинки<br/>
+                <img src="square_circle.jpg" alt="flower" 
+                usemap="#figure-map">
+
+                <map name="figure-map">
+                    <area shape="rect" coords="77,68,366,363"
+                    href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82"
+                    alt="Квадрат">
+                    <area shape="circle" coords="583,205,159"
+                    href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3"
+                    alt="Круг">
+                </map>
+            </li>
+            <li><a href="">Пустая ссылка</a></li>
+            <li><a>Ссылка без href</a></li>
+            <li><a href="https://kubsu.ru/" 
+                rel="nofollow">Ссылка, запрещенная для перехода</a></li>
+            <li><a href="https://kubsu.ru/" 
+                rel="noindex">Ссылка, запрещенная для индексации</a></li>
+            <li><a href="ftp://user_login:password@host/file.txt"></a>
+            Ссылка на файл на сервере FTP с авторизацией</li>
+        </ul>
+        
+        
+        <form action="/" 
+            method="POST">
+            <h1 id="formular">Анкета</h1>
+
+            <p><label>ФИО:<br />
+                <input name="field-name-1"
+                    value="Ваше имя" type=text 
+                    pattern="^[А-Яа-яЁё\s]+$" 
+                    title="ФИО должно содержать только буквы"/>
+            </label><br /></p>
+
+            <p><label>Телефон:<br />
+                <input name="field-tel" value="Ваш номер телефона" 
+                type="tel" pattern="^[0-9]+$" 
+                title="Номер телефона должен содержать только цифры"/>
+            </label><br /></p>
+
+            <p><label>Email:<br />
+                <input name="field-email" value="Ваша почта"
+                type="email"/>
+            </label><br /></p>
+
+            <p><label>Дата рождения:<br />
+                <input name="field-date" type="date" />
+            </label><br /></p>
+
+            <p><label>Пол:<br />
+                <input type="radio" 
+                name="radio-group-1" value="'male" />Мужской
+            </label>
+            <label><input type="radio" 
+                name="radio-group-1" value="female" />Женский
+            </label><br /></p>
+
+            <p><label>Любимый язык программирования:<br />
+                <select name="field-name-3">
+                    <option value="Pascal">Pascal</option>
+                    <option value="С">С</option>
+                    <option value="С++" selected="selected">С++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog </option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </label></p>
+
+            <p><label>Биография:<br />
+                <textarea name="field-name-2" 
+                style="width: 250px; height: 40px">Не забудьте рассказать о ваших интересах :)</textarea>
+            </label></p>
+
+            <p><label>С контрактом ознакомлен(-а): <input type="checkbox" 
+                checked="checked"
+                name="contract" />
+            </label></p>
+
+            <input type="submit" value="Отправить" />
+
+        </form>
+    </body>
+
+</html>
