@@ -16,10 +16,8 @@
             <li><a href="https://kubsu.ru/">КубГУ https</a></li>
             <li>Ссылка-изображение<br/>
                 <a href="https://kubsu.ru/ru/bio/uchebnyy-botanicheskiy-sad-kubgu">
-                <img src="image.jpg" alt="Цветок" 
-            style="width: 300px;"/></a></li>
-            <li><a href="/about"></a>Сокращенная ссылка
-            на внутреннюю страницу</li>
+                <img src="image.jpg" alt="Цветок" style="width: 300px;"/></a></li>
+            <li><a href="/about"></a>Сокращенная ссылка на внутреннюю страницу</li>
             <li><a href="/"></a>Сокращенная ссылка на главную страницу</li>
             <li><a href="#formular">Ссылка на анкету</a></li>
             <li><a href="https://kubsu.ru/?first=1&second=2&third=3">
@@ -32,6 +30,7 @@
                 уровнем выше текущего</a></li>
             <li><a href="../../index.html">Страница в каталоге
                 двумя уровнями выше текущего</a></li>
+            <li>Контекстная ссылка в тексте на сайт <a href="https://kubsu.ru/">университета</a></li>
             <li><a href="https://ru.wikipedia.org/wiki/#about_something">
                 Ссылка на фрагмент страницы стороннего сайта
             </a></li>
@@ -51,9 +50,9 @@
             <li><a href="">Ссылка с пустым href</a></li>
             <li><a>Ссылка без href</a></li>
             <li><a href="https://kubsu.ru/" 
-                rel="nofollow">Ссылка, запрещенная для перехода</a></li>
+                rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
             <li><a href="https://kubsu.ru/" 
-                rel="noindex">Ссылка, запрещенная для индексации</a></li>
+                rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
             <li><a href="ftp://user_login:password@host/file.txt"></a>
             Ссылка на файл на сервере FTP с авторизацией</li>
         </ul>
@@ -77,8 +76,7 @@
             
             <p><label>ФИО:<br />
                 <input name="field-name-1" type=text 
-                    pattern="^[А-Яа-яЁё\s]+$" 
-                    title="ФИО должно содержать только буквы"/
+                    pattern="^[А-Яа-яЁё\s]+$" title="ФИО должно содержать только буквы"
                     required placeholder="Ваше имя">
             </label><br /></p>
 
@@ -94,15 +92,15 @@
             </label><br /></p>
 
             <p><label>Дата рождения:<br />
-                <input name="field-date" type="date" />
+                <input name="field-date" type="date" required placeholder=""/>
             </label><br /></p>
 
             <p><label>Пол:<br />
                 <input type="radio" 
-                name="radio-group-1" value="'male" />Мужской
+                name="radio-group-1" value="'male" required placeholder=""/>Мужской
             </label>
             <label><input type="radio" 
-                name="radio-group-1" value="female" />Женский
+                name="radio-group-1" value="female" required placeholder=""/>Женский
             </label><br /></p>
 
             <p><label>
@@ -124,11 +122,12 @@
 
             <p><label>Биография:<br />
                 <textarea name="field-name-2" 
-                style="width: 200px; height: 50px">Не забудьте рассказать о ваших интересах :)</textarea>
+                style="width: 200px; height: 50px"
+                required placeholder="Не забудьте рассказать о ваших интересах :)"></textarea>
             </label></p>
 
             <p><label>С контрактом ознакомлен(-а): <input type="checkbox" 
-                checked="checked" name="contract" />
+                checked="checked" name="contract" required placeholder=""/>
             </label></p>
 
             <input type="submit" value="Отправить" />
